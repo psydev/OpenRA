@@ -94,6 +94,33 @@ MCVA.starport:
 	Valued:
 		Cost: 2500
 
+GRENADIER:
+	Inherits: ^Infantry
+#	Buildable:
+#		Queue: Infantry
+#		BuildPaletteOrder: 15
+#		Owner: atreides
+#		Hotkey: g
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Grenadier
+		Description: Grenade-throwing infantry\n  Strong vs Infantry, Light Vehicles, Buildings\n  
+		Icon: thumpericon
+	Selectable:
+		Bounds: 12,17,0,0
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 5
+	Armament:
+		Weapon: GRENADE
+	AttackFrontal:
+	TakeCover:
+	-RenderInfantry:
+	RenderInfantryProne:
+		Image: THUMPER
+
 TRIKEA:
 	Inherits: ^TRIKE
 	Buildable:

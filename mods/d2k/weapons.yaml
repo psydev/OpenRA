@@ -49,6 +49,32 @@ Bazooka:
 		Damage: 50
 		ImpactSound: EXPLSML2
 
+Grenade:
+	ROF: 50
+	Range: 5.5
+	Report: BAZOOK1
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 15
+		High: true
+		Shadow: yes
+		Proximity: true
+		Inaccuracy: 3
+		Image: RPG
+	Warhead:
+		Spread: 3
+		Versus: 
+			None: 100%
+			Wood: 50%
+			Light: 50%
+			Heavy: 25%
+			Concrete: 50%
+		Explosion: med_explosion
+		InfDeath: 4
+		SmudgeType: SandCrater, RockCrater
+		Damage: 75
+		ImpactSound: EXPLSML2
+
 Sniper:
 	ROF: 100
 	Range: 8.5
