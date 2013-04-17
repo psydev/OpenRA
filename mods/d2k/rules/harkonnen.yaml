@@ -138,6 +138,12 @@ CARRYALLH:
 	RenderUnit:
 		Image: CARRYALL
 
+#QUADH:
+#	Inherits: QUAD
+#	Buildable:
+#		-Prerequisites:
+#		Owner: harkonnen
+
 CARRYALLH.starport:
 	Inherits: CARRYALLH
 	Valued:
