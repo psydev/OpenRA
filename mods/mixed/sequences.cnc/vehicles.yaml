@@ -1,0 +1,136 @@
+mcv.cnc:
+	idle:
+		Start: 0
+		Facings: 32
+
+jeep.gdi:
+	idle: jeep.gdi
+		Start: 0
+		Facings: 32
+	turret: jeep.gdi
+		Start: 32
+		Facings: 32
+	muzzle: minigun
+		Start: 0
+		Length: 6
+		Facings: 8
+
+apc.gdi:
+	idle: apc.gdi
+		Start: 0
+		Facings: 32
+	turret: apctur
+		Start: 0
+		Facings: 32
+	muzzle: apcmuz
+		Start: 0
+		Length: 3
+		Stride: 6
+		Facings: 8
+	close: apc.gdi
+		Start: 32
+		Length: 3
+	unload: apc.gdi
+		Start: 32
+
+bggy:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: minigun
+		Start: 0
+		Length: 6
+		Facings: 8
+
+mtnk:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+
+ltnk:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+
+htnk:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+
+
+
+
+
+
+### Nod
+bike:
+	idle:
+		Start: 0
+		Facings: 32
+
+ftnk:
+	idle:
+		Start: 0
+		Facings: 32
+	muzzle: flame
+		Start: 0
+		Length: 13
+		Facings: 8
+
+mhq:
+	idle:
+		Start: 0
+		Facings: 32
+	spinner:
+		Start: 32
+		Length: 32
+
+msam:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	aim:
+		Start: 64
+		Facings: 32
+	turret-3:
+		Start: 64
+		Facings: 32
+
+mlrs:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	turret-2:
+		Start: 64
+		Facings: 32
+	turret-3:
+		Start: 96
+		Facings: 32
+
+stnk:
+	idle:
+		Start: 0
+		Facings: 32
+
+arty.cnc:
+	idle:
+		Start: 0
+		Facings: 32

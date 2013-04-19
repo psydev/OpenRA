@@ -1,0 +1,240 @@
+^Vehicle.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 50
+			Road: 100
+			Ore: 50
+			Gems: 50
+			Beach: 50
+		ROT: 5
+	SelectionDecorations:
+	Selectable: 
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Vehicle
+	Repairable: 
+	Chronoshiftable: 
+	Passenger: 
+		CargoType: Vehicle
+	IronCurtainable: 
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	AttackMove:
+	AcceptsCloakCrate:
+	WithSmoke:
+	DebugMuzzlePositions:
+
+^Tank.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+		ROT: 5
+	SelectionDecorations:
+	Selectable: 
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Vehicle
+	Repairable: 
+	Chronoshiftable: 
+	Passenger: 
+		CargoType: Vehicle
+	IronCurtainable: 
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	AttackMove:
+	AcceptsCloakCrate:
+	WithSmoke:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	DebugMuzzlePositions:
+
+^Husk.cnc:
+	Health:
+		HP: 140
+	Armor: 
+		Type: Light
+	Husk:
+	HiddenUnderFog:
+	AppearsOnRadar:
+	Burns:
+		Interval: 2
+	TargetableUnit:
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+
+^Infantry.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Health:
+		Radius: 3
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5
+	AutoTarget:
+		ScanRadius: 4
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Mobile:
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 80
+			Road: 100
+			Ore: 70
+			Gems: 70
+			Beach: 80
+	SelectionDecorations:
+	Selectable:
+		Voice: GenericVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Infantry
+	TakeCover:
+		ProneSpeed: 0.6
+	RenderInfantryProne:
+	AttackMove:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	CrushableInfantry:
+		WarnProbability: 60
+	RepairableNear:
+		Buildings: hosp
+		CloseEnough: 1
+	DebugMuzzlePositions:
+
+^Helicopter.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: yes
+	TargetableAircraft:
+		TargetTypes: Air
+		GroundedTargetTypes: Ground
+	SelectionDecorations:
+	Selectable:
+		Voice: VehicleVoice
+	Helicopter:
+		RepairBuildings: hpad.cnc
+		RearmBuildings:
+		LandWhenIdle: false
+	Buildable:
+		Queue: Plane
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	DebugMuzzlePositions:
+
+^Building.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	SelectionDecorations:
+	Selectable:
+		Priority: 3
+	TargetableBuilding:
+		TargetTypes: Ground
+	Armor:
+		Type: Wood
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 14
+	Building:
+#		Adjacent: 5
+#		RequiresBaseProvider: true
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: constru2.aud, hvydoor1.aud
+		SellSounds: cashturn.aud
+		TerrainTypes: Clear,Road
+	SoundOnDamageTransition:
+		DamagedSound: xplos.aud
+		DestroyedSound: crumble.aud
+	Buildable:
+		Queue: Building
+	GivesBuildableArea:
+	RenderBuilding:
+		PlayerPalette: cncx
+	WithBuildingExplosion:
+	DeadBuildingState:
+	EmitInfantryOnSell:
+		ActorTypes: e6.cnc,e1.cnc
+	MustBeDestroyed:
+	GivesExperience:
+	CaptureNotification@GDI:
+		Race: gdi
+		Notification: gdicapt1.aud
+	CaptureNotification@NOD:
+		Race: nod
+		Notification: nodcapt1.aud
+	ActorLostNotification:
+		Notification: strclost.aud
+	EditorAppearance:
+		RelativeToTopLeft: yes
+	AutoTargetIgnore:
+	ShakeOnDeath:
+	Sellable:
+	Capturable:
+	CapturableBar:
+	C4Demolishable:
+	DebugMuzzlePositions:
+
+^Plane.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: yes
+	SelectionDecorations:
+	Selectable:
+		Voice: GenericVoice
+	TargetableUnit:
+		TargetTypes: Air
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	DebugMuzzlePositions:

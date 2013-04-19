@@ -1,0 +1,53 @@
+proc.cnc:
+	idle: proc
+		Start: 0
+	damaged-idle: proc
+		Start: 1
+	make: procmake
+		Start: 0
+		Length: *
+
+silo.cnc: 
+	idle: silo
+		Start: 0
+		Length: 5
+	damaged-idle: silo
+		Start: 5
+		Length: 5
+	make: silomake
+		Start: 0
+		Length: *
+
+weap.cnc: 
+	idle: weap
+		Start: 0
+	damaged-idle: weap
+		Start: 1
+	make: weapmake
+		Start: 0
+		Length: *
+	build-top: weap2
+		Start: 0
+		Length: 4
+	damaged-build-top: weap2
+		Start: 4
+		Length: 4
+	idle-top: weap2
+		Start: 0
+	damaged-idle-top: weap2
+		Start: 4
+
+fix.cnc:
+	idle: fix
+		Start: 0
+	damaged-idle: fix
+		Start: 7
+	make: fixmake
+		Start: 0
+		Length: *
+	active: fix
+		Start: 1
+		Length: 6
+	damaged-active: fix
+		Start: 8
+		Length: 6

@@ -1,0 +1,536 @@
+MCV.CNC:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Icon: mcvicnh
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 2100
+		Prerequisites: anyhq
+		Owner: gdi,nod
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 750
+	Armor: 
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Transforms:
+		IntoActor: fact.cnc
+		Offset:-1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		PlayerPalette: cncx
+	MustBeDestroyed:
+	AttackMove:
+		JustMove:true
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.cnc.Husk
+	-GainsExperience:
+	-AcceptsCloakCrate:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+APC.GDI:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: APC
+		Icon: apcicnh
+		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 230
+		Prerequisites: barracks
+		Owner: gdi
+	Mobile:
+		ROT: 8
+		Speed: 9
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: APCGun
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+	Armament@SECONDARY:
+		Weapon: APCGun.AA
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		UnloadFacing: 220
+	LeavesHusk:
+		HuskActor: APC.cnc.Husk
+
+
+JEEP.GDI:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hum-Vee
+#		Icon: jeepicon
+		Icon: jeepicnh
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 220
+		Prerequisites: vehicleproduction
+		Owner: gdi
+	Mobile:
+		ROT: 11
+		Speed: 11
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Turreted:
+		ROT: 10
+		Offset: -85,0,171
+	Armament:
+		Weapon: MachineGun
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: JEEP.cnc.Husk
+
+MTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Med. Tank
+		Icon: mtnkicnh
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 240
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 6
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 5
+	Armament:
+		Weapon: 120mm.cnc
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 0,0,43
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+MSAM:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: MLRS
+		Icon: msamicnh
+		Description: Long range rocket artillery.\n  Strong vs all ground units.
+	Buildable:
+		BuildPaletteOrder: 250
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 6
+		ROT: 4
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Turreted:
+		ROT: 255
+		Offset: -256,0,128
+	Armament:
+		Weapon: 227mm
+		LocalOffset: 213,128,0, 213,-128,0
+	AttackFrontal:
+	RenderUnitTurretedAim:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: MSAM.Husk
+
+HTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Mammoth Tank
+		Icon: htnkicnh
+		Description: Heavily armored GDI Tank.\n  Strong vs Everything
+	Buildable:
+		BuildPaletteOrder: 260
+		Prerequisites: eye
+		Owner: gdi
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry
+		Speed: 4
+		ROT: 3
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 120mmDual
+		LocalOffset: 800, 180, 340, 800, -180, 340
+		Recoil: 170
+		RecoilRecovery: 42
+	Armament@SECONDARY:
+		Weapon: MammothMissiles
+		LocalOffset: -85, 384, 340, -85, -384, 340
+		LocalYaw: -100, 100
+		Recoil: 42
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	LeavesHusk:
+		HuskActor: HTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 34,34,0,-3
+
+
+
+
+
+### Nod
+
+ARTY.CNC:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Artillery
+		Icon:artyicnh
+		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 260
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 2
+		Speed: 6
+	Health:
+		HP: 75
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 9
+	Armament:
+		Weapon: ArtilleryShell
+		LocalOffset: 299, 0, 128
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	Explodes:
+		Weapon: UnitExplode
+		Chance: 75
+	AutoTarget:
+		InitialStance: Defend
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: ARTY.cnc.Husk
+
+FTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Flame Tank
+		Icon: ftnkicnh
+		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Aircraft
+	Buildable:
+		BuildPaletteOrder: 250
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7
+		Speed: 8
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5
+	Armament:
+		Weapon: BigFlamer
+		LocalOffset: 213,213,-85, 213,-213,-85
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	WithMuzzleFlash:
+	Explodes:
+		Weapon: FlametankExplode
+		EmptyWeapon: FlametankExplode
+	LeavesHusk:
+		HuskActor: FTNK.Husk
+
+BGGY:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Nod Buggy
+		Icon: bggyicnh
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 220
+		Prerequisites: vehicleproduction
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 12
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 10
+		Offset: -43,0,128
+	Armament:
+		Weapon: MachineGun
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: BGGY.Husk
+
+BIKE:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Recon Bike
+		Icon: bikeicnh
+		Description: Fast scout vehicle, armed with \nrockets.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 230
+		Prerequisites: vehicleproduction
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 15
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 35
+			Road: 100
+			Tiberium: 35
+			BlueTiberium: 35
+			Beach: 35
+	Health:
+		HP: 120
+	Armor: 
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Armament:
+		Weapon: BikeRockets
+		LocalOffset: -128, -170, 170, -128, 170, 170
+		LocalYaw: 100, -100
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: BIKE.Husk
+
+LTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Light Tank
+		Icon: ltnkicnh
+		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 240
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7	
+		Speed: 8
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 5
+	Armament:
+		Weapon: 70mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: -128,0,85
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: LTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+
+MLRS:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Mobile S.A.M.
+		Icon: mlrsicnh
+		Description: Powerful anti-air unit.\nCannot attack ground units.
+	Buildable:
+		BuildPaletteOrder: 270
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		Speed: 6
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Turreted:
+		ROT: 5
+		Offset: -128,0,128
+		AlignWhenIdle: true
+	Armament:
+		Weapon: Patriot
+		LocalOffset: 0,-171,0, 0,171,0
+	AttackTurreted:
+	RenderUnitTurretedAim:
+		PlayerPalette: cncx
+	AutoTarget:
+		InitialStance: Defend
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderRangeCircle:
+	LeavesHusk:
+		HuskActor: MLRS.Husk
+
+STNK:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stealth Tank
+		Icon: stnkicnh
+		Description: Long-range missile tank that can cloak.\nHas weak armor. Can be spotted by infantry.\n  Strong vs Vehicles, Tanks, Aircraft\n  Weak vs Infantry.
+	Buildable:
+		BuildPaletteOrder: 290
+		Prerequisites: tmpl
+		Owner: nod
+	Mobile:
+		ROT: 8
+		Speed: 10
+		Crushes: crate, infantry
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Armament:
+		Weapon: 227mm.stnk
+		LocalOffset: 213,43,128, 213,-43,128
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+		InitialStance: HoldFire
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	TargetableUnit:
+	LeavesHusk:
+		HuskActor: STNK.Husk

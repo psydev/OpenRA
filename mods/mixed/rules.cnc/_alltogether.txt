@@ -1,0 +1,1850 @@
+^Vehicle.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 50
+			Road: 100
+			Ore: 50
+			Gems: 50
+			Beach: 50
+		ROT: 5
+	SelectionDecorations:
+	Selectable: 
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Vehicle
+	Repairable: 
+	Chronoshiftable: 
+	Passenger: 
+		CargoType: Vehicle
+	IronCurtainable: 
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	AttackMove:
+	AcceptsCloakCrate:
+	WithSmoke:
+	DebugMuzzlePositions:
+
+^Tank.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+		ROT: 5
+	SelectionDecorations:
+	Selectable: 
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Vehicle
+	Repairable: 
+	Chronoshiftable: 
+	Passenger: 
+		CargoType: Vehicle
+	IronCurtainable: 
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	AttackMove:
+	AcceptsCloakCrate:
+	WithSmoke:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	DebugMuzzlePositions:
+
+^Husk.cnc:
+	Health:
+		HP: 140
+	Armor: 
+		Type: Light
+	Husk:
+	HiddenUnderFog:
+	AppearsOnRadar:
+	Burns:
+		Interval: 2
+	TargetableUnit:
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+
+^Infantry.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	Health:
+		Radius: 3
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5
+	AutoTarget:
+		ScanRadius: 4
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Mobile:
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 80
+			Road: 100
+			Ore: 70
+			Gems: 70
+			Beach: 80
+	SelectionDecorations:
+	Selectable:
+		Voice: GenericVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Infantry
+	TakeCover:
+	RenderInfantryProne:
+	AttackMove:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	CrushableInfantry:
+	RepairableNear:
+		Buildings: hosp
+		CloseEnough: 1
+	DebugMuzzlePositions:
+
+^Helicopter.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: yes
+	TargetableAircraft:
+		TargetTypes: Air
+		GroundedTargetTypes: Ground
+	SelectionDecorations:
+	Selectable:
+		Voice: VehicleVoice
+	Helicopter:
+		RepairBuildings: hpad
+		RearmBuildings:
+		LandWhenIdle: false
+	Buildable:
+		Queue: Plane
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	DebugMuzzlePositions:
+
+^Building.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+	SelectionDecorations:
+	Selectable:
+		Priority: 3
+	TargetableBuilding:
+		TargetTypes: Ground
+	Armor:
+		Type: Wood
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 14
+	Building:
+#		Adjacent: 5
+#		RequiresBaseProvider: true
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: constru2.aud, hvydoor1.aud
+		SellSounds: cashturn.aud
+		TerrainTypes: Clear,Road
+	SoundOnDamageTransition:
+		DamagedSound: xplos.aud
+		DestroyedSound: crumble.aud
+	Buildable:
+		Queue: Building
+	GivesBuildableArea:
+	RenderBuilding:
+		PlayerPalette: cncx
+	WithBuildingExplosion:
+	DeadBuildingState:
+	EmitInfantryOnSell:
+		ActorTypes: e6.cnc,e1.cnc
+	MustBeDestroyed:
+	GivesExperience:
+	CaptureNotification@GDI:
+		Race: gdi
+		Notification: gdicapt1.aud
+	CaptureNotification@NOD:
+		Race: nod
+		Notification: nodcapt1.aud
+	ActorLostNotification:
+		Notification: strclost.aud
+	EditorAppearance:
+		RelativeToTopLeft: yes
+	AutoTargetIgnore:
+	ShakeOnDeath:
+	Sellable:
+	Capturable:
+	CapturableBar:
+	C4Demolishable:
+	DebugMuzzlePositions:
+
+^Plane.cnc:
+	GivesBounty:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: yes
+	SelectionDecorations:
+	Selectable:
+		Voice: GenericVoice
+	TargetableUnit:
+		TargetTypes: Air
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+		Notification: unitlost.aud
+	DebugMuzzlePositions:
+
+
+
+TRAN.CNC:
+	Inherits: ^Helicopter.cnc
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Chinook Transport
+		Icon:tranicnh
+		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: hpad.cnc
+		BuiltAt: hpad.cnc
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 41,41
+	Helicopter:
+#		RearmBuildings: hpad.cnc
+		LandWhenIdle: true
+		ROT: 5
+		Speed: 15
+		InitialFacing: 0
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	RenderUnit:
+		PlayerPalette: cncx
+	WithRotor@PRIMARY:
+		Offset: -597,0,171
+	WithRotor@SECONDARY:
+		Id: rotor_2
+		Offset: 597,0,85
+	WithShadow:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 10
+		PipCount: 10
+	FallsToEarth:
+		Explosion: HeliCrash
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+		
+ORCA:
+	Inherits: ^Helicopter.cnc
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Orca
+		Icon: orcaicnh
+		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: hpad.cnc, anyhq
+		BuiltAt: hpad.cnc
+		Owner: gdi
+	Selectable:
+		Bounds: 30,24
+	Helicopter:
+		RearmBuildings: hpad.cnc
+		ROT: 4
+		Speed: 20
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Armament@PRIMARY:
+		Weapon: OrcaAGMissiles
+		LocalOffset: 427,-171,-213, 427,171,-213
+	Armament@SECONDARY:
+		Weapon: OrcaAAMissiles
+		LocalOffset: 427,-171,-213, 427,171,-213
+	AttackHeli:
+		FacingTolerance: 20
+	LimitedAmmo:
+		Ammo: 5
+		PipCount: 5
+	Reloads:
+		Count: 1
+		Period: 100
+	RenderUnit:
+		PlayerPalette: cncx
+	WithShadow:
+	FallsToEarth:
+		Explosion: HeliCrash
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+
+HELI:
+	Inherits: ^Helicopter.cnc
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Apache Longbow
+		Icon: heliicnh
+		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: hpad.cnc, anyhq
+		BuiltAt: hpad.cnc
+		Owner: nod
+	Selectable:
+		Bounds: 30,24
+	Helicopter:
+		RearmBuildings: hpad.cnc
+		ROT: 4
+		Speed: 20
+	Health:
+		HP: 125
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Armament@PRIMARY:
+		Weapon: HeliAGGun
+		LocalOffset: 128,-213,-85, 128,213,-85
+	Armament@SECONDARY:
+		Weapon: HeliAAGun
+		LocalOffset: 128,-213,-85, 128,213,-85
+	AttackHeli:
+		FacingTolerance: 20
+	LimitedAmmo:
+		Ammo: 10
+		PipCount: 5
+	Reloads:
+		Count: 10
+		Period: 200
+	RenderUnit:
+	WithRotor:
+		Offset: 0,0,85
+#	WithMuzzleFlash:
+	WithShadow:
+	FallsToEarth:
+		Explosion: HeliCrash
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+
+
+A10:
+	Inherits: ^Plane
+	Tooltip:
+		Name: A10 Bomber
+		Icon: a10icnh
+		Description: Used to deliver Napalm strikes.
+	Buildable:
+		Queue: Aircraft
+		BuildPaletteOrder: 1000
+		Owner: None
+	Valued:
+		Cost: 2000
+	Plane:
+		ROT: 4
+		Speed: 20
+	Health:
+		HP: 150
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12
+	RenderUnit:
+		PlayerPalette: cncx
+	WithShadow:
+	LimitedAmmo:
+		Ammo: 25
+	CarpetBomb:
+		Weapon: Napalm
+		Range: 3
+	-Selectable:
+	-GainsExperience:
+	FlyAwayOnIdle:
+
+E1.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Minigunner
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Icon: e1icnh
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 50
+	Armament:
+		Weapon: M16
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2,idle3,idle4
+	DetectCloaked:
+		Range: 2
+
+E2.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 160
+	Tooltip:
+		Name: Grenadier
+		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		Icon: e2icnh
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: gdi
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 50
+	Armament:
+		Weapon: Grenade.cnc
+		LocalOffset: 0,0,427
+		FireDelay: 15
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	DetectCloaked:
+		Range: 2
+	
+E3.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Rocket Soldier
+		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Icon: e3icnh
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 3
+	Health:
+		HP: 45
+	Armament:
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2
+
+E6.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+		Description: Infiltrates and captures enemy structures.\n  Strong vs Nothing\n  Weak vs Everything
+		Icon: e6icnh
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 25
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	Captures:
+		CaptureTypes: building, husk
+	-AutoTarget:
+	-DebugRetiliateAgainstAggressor:
+	-DebugNextAutoTargetScanTime:
+	AttackMove:
+		JustMove: true
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	-GainsExperience:
+
+RMBO:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Icon: rmboicnh
+		Name: Commando
+		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 50
+		Owner: gdi
+		Prerequisites: eye
+	Selectable:
+		Bounds: 12,17,0,-6
+#		Voice: CommandoVoice
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 200
+	Passenger:
+		PipType: Red
+	RevealsShroud:
+		Range: 6
+	AutoTarget:
+		ScanRadius: 5
+	C4Demolition:
+		C4Delay: 45
+	Armament:
+		Weapon: Sniper.cnc
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2,idle3
+#	AnnounceOnBuild:
+#	AnnounceOnKill:
+	DetectCloaked:
+		Range: 2
+
+
+
+
+
+
+### Nod
+E4.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Flamethrower
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Icon: e4icnh
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: nod
+		Prerequisites: anyhq
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Flamethrower
+		LocalOffset: 85,0,171
+		FireDelay: 3
+	AttackFrontal:
+	WithMuzzleFlash:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2
+
+E5.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Chem Warrior
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Icon: e5icnh
+	Buildable:
+		BuildPaletteOrder: 50
+		Owner: nod
+		Prerequisites: tmpl
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Chemspray
+		LocalOffset: 85,0,384
+		FireDelay: 3
+	AttackFrontal:
+	WithMuzzleFlash:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2
+
+
+FACT.CNC:
+	Inherits: ^Building.cnc
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 1000
+		Owner: None
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Yard
+		Description: Builds structures
+		Icon: facticnh
+	Building:
+		Power: 15
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 1500
+	Armor: 
+		Type: Wood
+	RevealsShroud:
+		Range: 10
+	Bib:
+	Production:
+		Produces: Building,Defense
+	Transforms:
+		IntoActor: mcv.cnc
+		Offset:1,1
+		Facing: 108
+	BaseBuilding:
+	ProductionBar:
+#	BaseProvider:
+#		Cooldown: 50
+#		Range: 14
+
+HPAD.CNC
+	RenderBuilding:
+		Image: hpad.cnc
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Helipad
+		Icon: hpadicnh
+		Description: Produces, rearms and\nrepairs helicopters
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: barracks
+		Owner: gdi,nod
+	Building:
+		Power: -10
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 5
+	Exit@1:
+		SpawnOffset: 0,-6
+		ExitCell: 0,0
+	Production:
+		Produces: Plane
+	BelowUnits:
+	Reservable:
+	RepairsUnits:
+	RallyPoint:
+	ProductionBar:	
+	PrimaryBuilding:
+
+NUKE:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Power Plant
+#		Icon: powricon
+		Icon: nukeicnh
+		Description: Generates power
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: gdi,nod
+		Prerequisites: fact
+	Building:
+		Power: 100
+		Footprint: x_ xx
+		Dimensions: 2,2
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 4
+	Bib:
+
+NUK2:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Advanced Power Plant
+#		Icon: apwricon
+		Icon:nuk2icnh
+		Description: Provides more power, cheaper than the \nstandard Power Plant
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: anyhq
+		Owner: gdi,nod
+	Building:
+		Power: 200
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 650
+	RevealsShroud:
+		Range: 4
+	Bib:
+	
+HQ:
+	RequiresPower:
+	CanPowerDown:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Communications Center
+#		Icon: domeicon
+		Icon: hqicnh
+		Description: Provides an overview of the battlefield.\n  Requires power to operate.
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: proc
+		Owner: gdi,nod
+	Building:
+		Power: -40
+		Footprint: x_ xx
+		Dimensions: 2,2
+	Health:
+		HP: 750
+	RevealsShroud:
+		Range: 10
+	Bib:
+	ProvidesRadar:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8
+	AirstrikePower:
+		Image: bombicnh
+		ChargeTime: 180
+		Description: Air Strike
+		LongDesc: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		EndChargeSound: airredy1.aud
+		SelectTargetSound: select1.aud
+		UnitType: a10
+	SupportPowerChargeBar:
+
+GTWR:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Guard Tower
+#		Icon: pboxicon
+		Icon: gtwricnh
+		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks, Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 40
+		Prerequisites: barracks
+		Owner: gdi,nod
+	Building:
+		Power: -10
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 7
+	Armament:
+		Weapon: HighV
+		LocalOffset: 256,0,256
+	AttackTurreted:
+	RenderBuilding:
+		QuantizedFacings: 8
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	-AutoTargetIgnore:
+	DetectCloaked:
+		Range: 5
+	RenderDetectionCircle:
+	RenderRangeCircle:
+	WithMuzzleFlash:
+	Turreted:
+		ROT:255
+
+GUN.CNC:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Turret
+		Icon: gunicnh
+		Description: Anti-Armor base defense.\n  Strong vs Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 45
+		Prerequisites: barracks
+		Owner: gdi,nod
+	Building:
+		Power: -20
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 12
+		InitialFacing: 50
+	RenderBuildingTurreted:
+	Armament:
+		Weapon: TurretGun.cnc
+		LocalOffset: -71,0,85
+	AttackTurreted:
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	-AutoTargetIgnore:
+	-RenderBuilding:
+	-DeadBuildingState:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5
+
+
+
+### GDI
+
+PYLE:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Barracks
+#		Icon: tenticon
+		Icon: pyleicnh
+		Description: Trains infantry
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anypower
+		Owner: gdi
+	Building:
+		Power: -20
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -10,2
+		ExitCell: 0,1
+	Exit@2:
+		SpawnOffset: 7,7
+		ExitCell: 1,1	
+	Production:		
+		Produces: Infantry
+	ProductionBar:
+	PrimaryBuilding:
+
+EYE:
+	RequiresPower:
+	CanPowerDown:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 1800
+	Tooltip:
+		Name: Advanced Communications Center
+#		Icon: atekicon
+		Icon: eyeicnh
+		Description: Provides access to the Ion Cannon.\n  Requires power to operate.
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: anyhq
+		Owner: gdi
+	Building:
+		Power: -200
+		Footprint: x_ xx
+		Dimensions: 2,2
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 10
+	Bib:
+	ProvidesRadar:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8
+	IonCannonPower:
+		Image: ionicnh
+		ChargeTime: 180
+		Description: Ion Cannon
+		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		BeginChargeSound: ionchrg1.aud
+		EndChargeSound: ionredy1.aud
+		LaunchSound: ion1.aud
+		SelectTargetSound: select1.aud
+	SupportPowerChargeBar:
+	
+ATWR:
+	Inherits: ^Building.cnc
+	RequiresPower:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Advanced Guard Tower
+#		Icon: spyicon
+		Icon: atwricnh
+		Description: Anti-armor defensive structure.\n  Strong vs Light Vehicles, Tanks\n  Weak vs Infantry
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Owner: gdi
+	Building:
+		Power: -30
+		Footprint: _ x
+		Dimensions: 1,2
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	Armor: 
+		Type: Heavy
+	RevealsShroud:
+		Range: 9
+	Turreted:
+		ROT:255
+	Armament:
+		Weapon: TowerMissle
+		LocalOffset: 299,299,-85, 299,-299,-85
+		LocalYaw: -100,100
+	AttackTurreted:
+	AutoTarget:
+	RenderBuilding:
+		QuantizedFacings: 8
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	-AutoTargetIgnore:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6
+	RenderRangeCircle:
+
+
+
+
+
+### Nod
+
+HAND:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hand of Nod
+		Icon: handicnh
+		Description: Trains infantry
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anypower
+		Owner: nod
+	Building:
+		Power: -20
+		Footprint: __ xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 12,24
+		ExitCell: 1,2
+	Production:
+		Produces: Infantry
+	ProductionBar:
+	PrimaryBuilding:
+
+TMPL:
+	RequiresPower:
+	CanPowerDown:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Temple of Nod
+		Icon: tmplicnh
+		Description: Place of worship and secret missile silo.\n  Requires power to operate.
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: anyhq
+		Owner: nod
+	Building:
+		Power: -150
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 6
+	Bib:
+	NukePower:
+		Image: atomicnh
+		ChargeTime: 300
+		Description: Nuclear Strike
+		LongDesc: Launch a tactical nuke.\nApplies heavy damage over a large area.
+		BeginChargeSound: 
+		EndChargeSound: nukavail.aud
+		SelectTargetSound: select1.aud
+		LaunchSound: nukemisl.aud
+		MissileWeapon: atomic.cnc
+	SupportPowerChargeBar:
+
+OBLI:
+	RequiresPower:
+	Inherits: ^Building.cnc
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Obelisk of Light
+		Icon:obliicnh
+		Description: Advanced base defense.\n  Requires power to operate.\n  Strong vs Tanks, Infantry\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 60
+		Prerequisites: tmpl
+		Owner: nod
+	Building:
+		Power: -150
+		Footprint: _ x
+		Dimensions: 1,2
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	Armor: 
+		Type: Heavy
+	RevealsShroud:
+		Range: 8
+	RenderBuildingCharge:
+		PlayerPalette: cncx
+		ChargeAudio: obelpowr.aud
+		QuantizedFacings: 8
+	Armament:
+		Weapon: Laser
+		LocalOffset: 0,0,725
+		FireDelay: 8
+	AttackTurreted:
+	Turreted:
+		ROT:255
+	AutoTarget:
+#	RenderBuilding:
+#		PlayerPalette: cncx
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	-AutoTargetIgnore:
+	-RenderBuilding:
+	RenderRangeCircle:
+	-EmitInfantryOnSell:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6
+
+
+### custom prerequisites:
+
+BARRACKS:
+	Tooltip:
+		Name: Infantry Production
+		Description: Infantry Production
+
+VEHICLEPRODUCTION:
+	Tooltip:
+		Name: Vehicle Production
+		Description: Vehicle Production
+
+ANYPOWER:
+	Tooltip:
+		Name: Power Plant
+		Description: Power Plant
+
+ANYHQ:
+	Tooltip:
+		Name: a communications center
+		Description: a communications center
+
+
+
+MCV.CNC:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Icon: mcvicnh
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: gdi,nod
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 750
+	Armor: 
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Transforms:
+		IntoActor: fact.cnc
+		Offset:-1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		PlayerPalette: cncx
+	MustBeDestroyed:
+	AttackMove:
+		JustMove:true
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.cnc.Husk
+	-GainsExperience:
+	-AcceptsCloakCrate:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+APC.GDI:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: APC
+		Icon: apcicnh
+		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: barracks
+		Owner: gdi
+	Mobile:
+		ROT: 8
+		Speed: 9
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: APCGun
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+	Armament@SECONDARY:
+		Weapon: APCGun.AA
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		UnloadFacing: 220
+	LeavesHusk:
+		HuskActor: APC.cnc.Husk
+
+
+JEEP.GDI:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hum-Vee
+#		Icon: jeepicon
+		Icon: jeepicnh
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: vehicleproduction
+		Owner: gdi
+	Mobile:
+		ROT: 11
+		Speed: 11
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Turreted:
+		ROT: 10
+		Offset: -85,0,171
+	Armament:
+		Weapon: MachineGun
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: JEEP.cnc.Husk
+
+MTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Med. Tank
+		Icon: mtnkicnh
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 6
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 5
+	Armament:
+		Weapon: 120mm.cnc
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 0,0,43
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+MSAM:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: MLRS
+		Icon: msamicnh
+		Description: Long range rocket artillery.\n  Strong vs all ground units.
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 6
+		ROT: 4
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Turreted:
+		ROT: 255
+		Offset: -256,0,128
+	Armament:
+		Weapon: 227mm
+		LocalOffset: 213,128,0, 213,-128,0
+	AttackFrontal:
+	RenderUnitTurretedAim:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: MSAM.Husk
+
+HTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Mammoth Tank
+		Icon: htnkicnh
+		Description: Heavily armored GDI Tank.\n  Strong vs Everything
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: eye
+		Owner: gdi
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry
+		Speed: 4
+		ROT: 3
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 120mmDual
+		LocalOffset: 800, 180, 340, 800, -180, 340
+		Recoil: 170
+		RecoilRecovery: 42
+	Armament@SECONDARY:
+		Weapon: MammothMissiles
+		LocalOffset: -85, 384, 340, -85, -384, 340
+		LocalYaw: -100, 100
+		Recoil: 42
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	LeavesHusk:
+		HuskActor: HTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 34,34,0,-3
+
+
+
+
+
+### Nod
+
+ARTY.CNC:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Artillery
+		Icon:artyicnh
+		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 2
+		Speed: 6
+	Health:
+		HP: 75
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 9
+	Armament:
+		Weapon: ArtilleryShell
+		LocalOffset: 299, 0, 128
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	Explodes:
+		Weapon: UnitExplode
+		Chance: 75	
+	AutoTarget:
+		InitialStance: Defend
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: ARTY.cnc.Husk
+
+FTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Flame Tank
+		Icon: ftnkicnh
+		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Aircraft
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7
+		Speed: 8
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5
+	Armament:
+		Weapon: BigFlamer
+		LocalOffset: 213,213,-85, 213,-213,-85
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	WithMuzzleFlash:
+	Explodes:
+		Weapon: FlametankExplode
+		EmptyWeapon: FlametankExplode
+	LeavesHusk:
+		HuskActor: FTNK.Husk
+
+BGGY:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Nod Buggy
+		Icon: bggyicnh
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: vehicleproduction
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 12
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 10
+		Offset: -43,0,128
+	Armament:
+		Weapon: MachineGun
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: BGGY.Husk
+
+BIKE:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Recon Bike
+		Icon: bikeicnh
+		Description: Fast scout vehicle, armed with \nrockets.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: vehicleproduction
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 15
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 35
+			Road: 100
+			Tiberium: 35
+			BlueTiberium: 35
+			Beach: 35
+	Health:
+		HP: 120
+	Armor: 
+		Type: Light
+	RevealsShroud:
+		Range: 8
+	Armament:
+		Weapon: BikeRockets
+		LocalOffset: -128, -170, 170, -128, 170, 170
+		LocalYaw: 100, -100
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: BIKE.Husk
+
+LTNK:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Light Tank
+		Icon: ltnkicnh
+		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7	
+		Speed: 8
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6
+	Turreted:
+		ROT: 5
+	Armament:
+		Weapon: 70mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: -128,0,85
+	AttackTurreted:
+	RenderUnitTurreted:
+		PlayerPalette: cncx
+	AutoTarget:
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	LeavesHusk:
+		HuskActor: LTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+
+MLRS:
+	Inherits: ^Tank.cnc
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Mobile S.A.M.
+		Icon: mlrsicnh
+		Description: Powerful anti-air unit.\nCannot attack ground units.
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		Speed: 6
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10
+	Turreted:
+		ROT: 5
+		Offset: -128,0,128
+		AlignWhenIdle: true
+	Armament:
+		Weapon: Patriot
+		LocalOffset: 0,-171,0, 0,171,0
+	AttackTurreted:
+	RenderUnitTurretedAim:
+		PlayerPalette: cncx
+	AutoTarget:
+		InitialStance: Defend
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderRangeCircle:
+	LeavesHusk:
+		HuskActor: MLRS.Husk
+
+STNK:
+	Inherits: ^Vehicle.cnc
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stealth Tank
+		Icon: stnkicnh
+		Description: Long-range missile tank that can cloak.\nHas weak armor. Can be spotted by infantry.\n  Strong vs Vehicles, Tanks, Aircraft\n  Weak vs Infantry.
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: tmpl
+		Owner: nod
+	Mobile:
+		ROT: 8
+		Speed: 10
+		Crushes: crate, infantry
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Armament:
+		Weapon: 227mm.stnk
+		LocalOffset: 213,43,128, 213,-43,128
+	AttackFrontal:
+	RenderUnit:
+		PlayerPalette: cncx
+	AutoTarget:
+		InitialStance: HoldFire
+	DebugRetiliateAgainstAggressor:
+	DebugNextAutoTargetScanTime:
+	TargetableUnit:
+	LeavesHusk:
+		HuskActor: STNK.Husk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MCV.cnc.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Mobile Construction Vehicle (Destroyed)
+		Icon: mcvicnh
+	RenderUnit:
+		Image: mcv.cnc
+		
+		
+		
+APC.cnc.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Armored Personnel Carrier (Destroyed)
+		Icon: apcicnh
+	RenderUnit:
+		PlayerPalette: cncx
+		Image: apc.gdi
+
+JEEP.cnc.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Hum-Vee (Destroyed)
+		Icon: jeepicnh
+	RenderUnit:
+		PlayerPalette: cncx
+		Image: jeep.gdi
+
+MTNK.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Medium Tank (Destroyed)
+		Icon: mtnkicnh
+	RenderUnit:
+		PlayerPalette: cncx
+		Image: mtnk
+	ThrowsParticle@turret:
+		Anim: turret
+
+HTNK.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Mammoth Tank (Destroyed)
+		Icon: htnkicnh
+	RenderUnit:
+		PlayerPalette: cncx
+		Image: htnk
+	ThrowsParticle@turret:
+		Anim: turret
+
+MSAM.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Rocket Launcher (Destroyed)
+		Icon: msamicnh
+	RenderUnit:
+		PlayerPalette: cncx
+		Image: msam
+	ThrowsParticle@turret:
+		Anim: turret
+
+
+
+
+
+### Nod
+
+FTNK.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Flame Tank (Destroyed)
+		Icon: ftnkicnh
+	RenderUnit:
+		Image: ftnk
+		PlayerPalette: cncx
+
+
+ARTY.cnc.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Artillery (Destroyed)
+		Icon: artyicnh
+	RenderUnit:
+		Image: arty
+		PlayerPalette: cncx
+
+BGGY.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Nod Buggy (Destroyed)
+		Icon: bggyicnh
+		PlayerPalette: cncx
+	RenderUnit:
+		Image: bggy
+		PlayerPalette: cncx
+
+BIKE.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Recon Bike (Destroyed)
+		Icon: bikeicnh
+		PlayerPalette: cncx
+	RenderUnit:
+		Image: bike
+
+LTNK.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Light Tank (Destroyed)
+		Icon: ltnkicnh
+	RenderUnit:
+		Image: ltnk
+		PlayerPalette: cncx
+	ThrowsParticle@turret:
+		Anim: turret
+
+MLRS.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: SSM Launcher (Destroyed)
+		Icon: mlrsicnh
+	RenderUnit:
+		Image: mlrs
+		PlayerPalette: cncx
+	ThrowsParticle@turret:
+		Anim: turret
+		
+STNK.Husk:
+	Inherits: ^Husk.cnc
+	Tooltip:
+		Name: Stealth Tank (Destroyed)
+		Icon: stnkicnh
+	RenderUnit:
+		Image: stnk
+		PlayerPalette: cncx

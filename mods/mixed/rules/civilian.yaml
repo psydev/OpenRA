@@ -1,0 +1,491 @@
+C1:
+	Inherits: ^CivInfantry
+
+C2:
+	Inherits: ^CivInfantry
+	Selectable:
+		Voice: CivilianFemaleVoice
+
+C3:
+	Inherits: ^CivInfantry
+
+C4:
+	Inherits: ^CivInfantry
+	Selectable:
+		Voice: CivilianFemaleVoice
+	RenderInfantryPanic:
+		Image: C2
+
+C5:
+	Inherits: ^CivInfantry
+	RenderInfantryPanic:
+		Image: C1
+
+C6:
+	Inherits: ^CivInfantry
+	Selectable:
+		Voice: CivilianFemaleVoice
+	RenderInfantryPanic:
+		Image: C2
+
+C7:
+	Inherits: ^CivInfantry
+	RenderInfantryPanic:
+		Image: C1
+
+C8:
+	Inherits: ^CivInfantry
+	Selectable:
+		Voice: CivilianFemaleVoice
+	RenderInfantryPanic:
+		Image: C2
+
+C9:
+	Inherits: ^CivInfantry
+	RenderInfantryPanic:
+		Image: C1
+
+C10:
+	Inherits: ^CivInfantry
+	Selectable:
+		Voice: CivilianFemaleVoice
+	RenderInfantryPanic:
+		Image: C2
+
+FCOM:
+	Inherits: ^TechBuilding
+	Building:
+		Power: -200
+		Footprint: xx xx
+		Dimensions: 2,2
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 400
+	Armor:
+		Type: Wood
+	Tooltip:
+		Name: Forward Command
+	RevealsShroud:
+		Range: 10
+	Bib:
+
+HOSP:
+	Inherits: ^TechBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Hospital
+	RepairsUnits:
+
+V01:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Church
+	RevealsShroud:
+		Range: 10
+	TransformOnCapture:
+		IntoActor: v01.sniper
+		SkipMakeAnims: true
+	Capturable:
+		Type: civilianbuilding
+		CaptureCompleteTime: 0
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V01.SNIPER:
+	Inherits: V01
+	RenderBuilding:
+		Image: V01
+	RenderRangeCircle:
+	AutoTarget:
+	Turreted:
+		ROT: 255
+	Armament:
+		Weapon: Sniper
+		LocalOffset: 469,0,0
+	AttackTurreted:
+	Cargo:
+		InitialUnits: sniper
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+	TransformOnPassenger@Sniper:
+		PassengerTypes: sniper
+		OnExit: v01
+		SkipMakeAnims: true
+		BecomeNeutral: true
+	-Capturable:
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V02:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V03:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V04:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V05:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V06:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V07:
+	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V08:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V09:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V10:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V11:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V12:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V13:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V14:
+	Inherits: ^CivField
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V15:
+	Inherits: ^CivField
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V16:
+	Inherits: ^CivField
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V17:
+	Inherits: ^CivField
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V18:
+	Inherits: ^CivField
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+		
+V19:
+	Inherits: ^CivBuilding
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Oil Pump
+
+BARL:
+	Inherits: ^TechBuilding
+	Selectable:
+		Priority: 0
+	Health:
+		HP: 10
+	Explodes:
+		Weapon: BarrelExplode
+	Tooltip:
+		Name: Explosive Barrel
+	AutoTargetIgnore:
+	Armor:
+		Type: Light
+	-C4Demolishable:
+
+BRL3:
+	Inherits: ^TechBuilding
+	Selectable:
+		Priority: 0
+	Health:
+		HP: 10
+	Explodes:
+		Weapon: BarrelExplode
+	Tooltip:
+		Name: Explosive Barrel
+	AutoTargetIgnore:
+	Armor:
+		Type: Light
+	-C4Demolishable:
+
+MISS:
+	Inherits: ^TechBuilding
+	Selectable:
+		Priority: 0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 400
+	Armor:
+		Type: Wood
+	Tooltip:
+		Name: Technology Center
+	Bib:
+
+BIO:
+	Inherits: ^TechBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Biological Lab
+
+
+OILB:
+	Inherits: ^TechBuilding
+	Selectable:
+		Priority: 0
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 400
+	Armor:
+		Type: Wood
+	Bib:
+	RevealsShroud:
+		Range: 3
+	Capturable:
+	CapturableBar:
+	EngineerRepairable:
+	-MustBeDestroyed:
+	CashTrickler:
+		Period: 250
+		Amount: 50
+	Tooltip:
+		Name: Oil Derrick
+
+BR1:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 235
+		DamagedTemplate: 236
+		DestroyedTemplate: 237
+		SouthOffset: 0,2
+
+BR2:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 238
+		DamagedTemplate: 239
+		DestroyedTemplate: 240
+		NorthOffset: 3,0
+
+BR3:
+	Inherits: ^Bridge
+	Bridge:
+		Long: yes
+		ShorePieces: br1,br2
+		Template: 241
+		DamagedTemplate: 242
+		DestroyedTemplate: 243
+		DestroyedPlusNorthTemplate: 245
+		DestroyedPlusSouthTemplate: 244
+		DestroyedPlusBothTemplate: 246
+		NorthOffset: 2,0
+		SouthOffset: 0,1
+
+BRIDGE1:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 131
+		DamagedTemplate: 378
+		DestroyedTemplate: 132
+	Building:
+		Footprint: _____ _____ _____
+		Dimensions: 5,3
+
+BRIDGE2:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 133
+		DamagedTemplate: 379
+		DestroyedTemplate: 134
+	Building:
+		Footprint: _____ _____
+		Dimensions: 5,2
+
+SBRIDGE1:
+	Inherits: ^SVBridge
+	Bridge:
+		Template: 520
+		DamagedTemplate: 521
+		DestroyedTemplate: 522
+	Building:
+		Footprint: ___ ___
+		Dimensions: 3,2
+SBRIDGE2:
+	Inherits: ^SHBridge
+	Bridge:
+		Template: 531
+		DamagedTemplate: 532
+		DestroyedTemplate: 533
+	Building:
+		Footprint: __ __ __
+		Dimensions: 2,3
+SBRIDGE3:
+	Inherits: ^STDBridge
+	Bridge:
+		Template: 523
+		DamagedTemplate: 524
+		DestroyedTemplate: 525
+	Building:
+		Footprint: ____ ____
+		Dimensions: 4,2
+SBRIDGE4:
+	Inherits: ^STDBridge
+	Bridge:
+		Template: 527
+		DamagedTemplate: 528
+		DestroyedTemplate: 529
+	Building:
+		Footprint: ____ ____
+		Dimensions: 4,2
+
+#Desert Terrain Expansion
+V20:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+V21:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+V22:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V23:
+	Inherits: ^DesertCivBuilding
+
+V24:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+
+V25:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Church
+
+V26:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V27:
+	Inherits: ^DesertCivBuilding
+
+V28:
+	Inherits: ^DesertCivBuilding
+
+V29:
+	Inherits: ^DesertCivBuilding
+
+V30:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V31:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V32:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V33:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+
+V34:
+	Inherits: ^DesertCivBuilding
+
+V35:
+	Inherits: ^DesertCivBuilding
+
+V36:
+	Inherits: ^DesertCivBuilding
+
+V37:
+	Inherits: ^DesertCivBuilding
+	Building:
+		Footprint: __xx_ ___xx
+		Dimensions: 5,2

@@ -1,0 +1,7 @@
+Cursors:
+	mouse: cursor
+		ioncannon:
+			start:103
+			length:16
+			x:12
+			y:12

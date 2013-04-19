@@ -1,0 +1,150 @@
+Metadata:
+	Title: Mixed Universe!
+	Description: RA meets C&C
+	Version: mixed-0418
+	Author: Psydev
+
+Folders:
+	.
+	./mods/mixed
+	./mods/mixed/bits
+	./mods/mixed/bits/desert
+	./mods/mixed/uibits
+	~^/Content/ra
+	./mods/mixed/bits.cnc
+	./mods/mixed/bits.cnc/sounds
+	./mods/mixed/bits.cnc/speech
+	./mods/mixed/bits.cnc/effects
+	./mods/mixed/bits.cnc/tempicnh
+
+Packages:
+	~main.mix
+	redalert.mix
+	conquer.mix
+	hires.mix
+	local.mix
+	sounds.mix
+	speech.mix
+	allies.mix
+	russian.mix
+	temperat.mix
+	snow.mix
+	interior.mix
+	~scores.mix
+	~movies1.mix
+	~movies2.mix
+
+Rules:
+	mods/mixed/_internal_ra_changes.yaml
+	mods/mixed/rules.cnc/structures.yaml
+	mods/mixed/rules.cnc/aircraft.yaml
+	mods/mixed/rules.cnc/infantry.yaml
+	mods/mixed/rules.cnc/vehicles.yaml
+	mods/mixed/rules.cnc/husks.yaml
+	mods/mixed/rules.cnc/defaults.yaml
+	mods/mixed/_factions.yaml
+	mods/mixed/rules/defaults.yaml
+	mods/mixed/rules/system.yaml
+	mods/mixed/rules/vehicles.yaml
+	mods/mixed/rules/structures.yaml
+	mods/mixed/rules/infantry.yaml
+	mods/mixed/rules/civilian.yaml
+	mods/mixed/rules/trees.yaml
+	mods/mixed/rules/aircraft.yaml
+	mods/mixed/rules/ships.yaml
+
+Sequences:
+	mods/mixed/sequences.cnc/structures.shared.yaml
+	mods/mixed/sequences.cnc/explosions.yaml
+	mods/mixed/sequences.yaml
+	mods/mixed/sequences.cnc/misc.yaml
+	mods/mixed/sequences.cnc/structures.yaml
+	mods/mixed/sequences.cnc/aircraft.yaml
+	mods/mixed/sequences.cnc/infantry.yaml
+	mods/mixed/sequences.cnc/vehicles.yaml
+
+Cursors:
+	mods/mixed/_cursors.yaml
+	mods/mixed/cursors.yaml
+
+Chrome:
+	mods/mixed/chrome.yaml
+	mods/mixed/_chrome.yaml
+	
+Assemblies:
+	mods/mixed/OpenRA.Mods.RA.dll
+	mods/cnc/OpenRA.Mods.Cnc.dll
+
+ChromeLayout:
+	mods/mixed/chrome/gameinit.yaml
+	mods/mixed/chrome/ingame.yaml
+	mods/mixed/chrome/ingame-chat.yaml
+	mods/mixed/chrome/mainmenu.yaml
+	mods/mixed/chrome/settings.yaml
+	mods/mixed/chrome/lobby.yaml
+	mods/mixed/chrome/map-chooser.yaml
+	mods/mixed/chrome/create-server.yaml
+	mods/mixed/chrome/serverbrowser.yaml
+	mods/mixed/chrome/replaybrowser.yaml
+	mods/mixed/chrome/dropdowns.yaml
+	mods/mixed/chrome/modchooser.yaml
+	mods/mixed/chrome/cheats.yaml
+	mods/mixed/chrome/objectives.yaml
+
+Weapons:
+	mods/mixed/weapons.yaml
+	mods/mixed/weapons.cnc.yaml
+	
+Voices:
+	mods/mixed/voices.yaml
+
+Notifications:
+	mods/mixed/notifications.yaml
+	
+TileSets:
+	mods/mixed/tilesets/snow.yaml
+	mods/mixed/tilesets/interior.yaml
+	mods/mixed/tilesets/temperat.yaml
+	mods/mixed/tilesets/desert.yaml
+
+Music:
+	mods/mixed/music.yaml
+	mods/mixed/music-cs.yaml
+	mods/mixed/music-am.yaml
+
+Movies:
+	mods/mixed/movies1.yaml
+	mods/mixed/movies2.yaml
+
+LoadScreen: RALoadScreen
+	LoadScreenImage: mods/mixed/uibits/loadscreen.png
+	InstallerMenuWidget: INSTALL_PANEL
+	TestFile: redalert.mix
+	PackageURL: http://open-ra.org/get-dependency.php?file=ra-packages
+
+ServerTraits:
+	LobbyCommands
+	MasterServerPinger
+
+ChromeMetrics:
+	mods/mixed/metrics.yaml
+
+Fonts:
+	Regular:
+		Font:FreeSans.ttf
+		Size:14
+	Bold:
+		Font:FreeSansBold.ttf
+		Size:14
+	Title:
+		Font:titles.ttf
+		Size:48
+	BigBold:
+		Font:FreeSansBold.ttf
+		Size:24
+	Tiny:
+		Font:FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font:FreeSansBold.ttf
+		Size:10

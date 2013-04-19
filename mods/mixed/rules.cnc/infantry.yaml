@@ -1,0 +1,222 @@
+E1.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Minigunner
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Icon: e1icnh
+	Buildable:
+		BuildPaletteOrder: 210
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 50
+	Armament:
+		Weapon: M16
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2,idle3,idle4
+	DetectCloaked:
+		Range: 2
+
+E2.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 160
+	Tooltip:
+		Name: Grenadier
+		Description: Infantry armed with grenades. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+		Icon: e2icnh
+	Buildable:
+		BuildPaletteOrder: 240
+		Prerequisites: anyhq
+		Owner: gdi
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 50
+	Armament:
+		Weapon: Grenade.cnc
+		LocalOffset: 0,0,427
+		FireDelay: 15
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	DetectCloaked:
+		Range: 2
+	
+E3.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Rocket Soldier
+		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+		Icon: e3icnh
+	Buildable:
+		BuildPaletteOrder: 220
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 3
+	Health:
+		HP: 45
+	Armament:
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2
+
+E6.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+		Description: Infiltrates and captures enemy structures.\n  Strong vs Nothing\n  Weak vs Everything
+		Icon: e6icnh
+	Buildable:
+		BuildPaletteOrder: 230
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 25
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	Captures:
+		CaptureTypes: building, husk
+	-AutoTarget:
+	-DebugRetiliateAgainstAggressor:
+	-DebugNextAutoTargetScanTime:
+	AttackMove:
+		JustMove: true
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	-GainsExperience:
+
+RMBO:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Icon: rmboicnh
+		Name: Commando
+		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 250
+		Owner: gdi
+		Prerequisites: eye
+	Selectable:
+		Bounds: 12,17,0,-6
+#		Voice: CommandoVoice
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 200
+	Passenger:
+		PipType: Red
+	RevealsShroud:
+		Range: 6
+	AutoTarget:
+		ScanRadius: 5
+	C4Demolition:
+		C4Delay: 45
+	Armament:
+		Weapon: Sniper.cnc
+	AttackFrontal:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2,idle3
+#	AnnounceOnBuild:
+#	AnnounceOnKill:
+	DetectCloaked:
+		Range: 2
+
+
+
+
+
+
+### Nod
+E4.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Flamethrower
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+		Icon: e4icnh
+	Buildable:
+		BuildPaletteOrder: 240
+		Owner: nod
+		Prerequisites: anyhq
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 5
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Flamethrower
+		LocalOffset: 85,0,171
+		FireDelay: 3
+	AttackFrontal:
+	WithMuzzleFlash:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2
+
+E5.CNC:
+	Inherits: ^Infantry.cnc
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Chem Warrior
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Vehicles
+		Icon: e5icnh
+	Buildable:
+		BuildPaletteOrder: 250
+		Owner: nod
+		Prerequisites: tmpl
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 4
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Chemspray
+		LocalOffset: 85,0,384
+		FireDelay: 3
+	AttackFrontal:
+	WithMuzzleFlash:
+	RenderInfantryProne:
+		PlayerPalette: cncx
+		IdleAnimations: idle1,idle2
+	DetectCloaked:
+		Range: 2

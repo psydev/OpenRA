@@ -1,0 +1,288 @@
+fact.cnc:
+	build:
+		Start: 4
+		Length: 20
+		Tick: 100
+	idle:
+		Start: 0
+		Length: 4
+		Tick: 100
+	damaged-idle:
+		Start: 24
+		Length: 4
+		Tick: 100
+	damaged-build:
+		Start: 28
+		Length: 20
+		Tick: 100
+	dead:
+		Start: 48
+	make: factmake.cnc
+		Start: 0
+		Length: *
+		Tick: 80
+
+hpad.cnc:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 7
+	active:
+		Start: 1
+		Length: 6
+		Tick: 100
+	damaged-active:
+		Start: 8
+		Length: 6
+		Tick: 100		
+	dead:
+		Start: 14
+	make: hpadmake.cnc
+		Start: 0
+		Length: *
+		Tick: 80
+
+nuke:
+	idle:
+		Start: 0
+		Length: 4
+		Tick: 1000
+	damaged-idle:
+		Start: 4
+		Length: 4
+		Tick: 1000
+	dead:
+		Start: 8
+		Tick: 1000
+	make: nukemake
+		Start: 0
+		Length: *
+		Tick: 80
+
+pyle:
+	idle:
+		Start: 0
+		Length: 10
+		Tick: 100		
+	damaged-idle:
+		Start: 10
+		Length: 10
+		Tick: 100		
+	dead:
+		Start: 20
+		Tick: 100
+	make: pylemake
+		Start: 0
+		Length: *
+		Tick: 80
+
+
+hq:
+	idle:
+		Start: 0
+		Length: 16
+		Tick: 100
+	damaged-idle:
+		Start: 16
+		Length: 16
+		Tick: 100
+	dead:
+		Start: 32
+	make: hqmake
+		Start: 0
+		Length: *
+		Tick: 80
+
+nuk2:
+	idle:
+		Start: 0
+		Length: 4
+		Tick: 1000
+	damaged-idle:
+		Start: 4
+		Length: 4
+		Tick: 1000
+	dead:
+		Start: 8
+	make: nuk2make
+		Start: 0
+		Length: *
+		Tick: 80
+
+gtwr:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+	make: gtwrmake
+		Start: 0
+		Length: *
+		Tick: 80
+	muzzle: minigun
+		Start: 0
+		Length: 6
+		Facings: 8
+
+gun.cnc:
+	idle:
+		Start: 0
+		Facings: 32
+	recoil:
+		Start: 32
+		Facings: 32
+	damaged-idle:
+		Start: 64
+		Facings: 32
+	damaged-recoil:
+		Start: 96
+		Facings: 32
+	make: gunmake.cnc
+		Start: 0
+		Length: *
+		Tick: 80
+
+
+#GDI
+eye:
+	idle:
+		Start: 0
+		Length: 16
+		Tick: 100
+	damaged-idle:
+		Start: 16
+		Length: 16
+		Tick: 100
+	dead:
+		Start: 32
+	make: eyemake
+		Start: 0
+		Length: *
+		Tick: 80
+
+atwr:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+	make: atwrmake
+		Start: 0
+		Length: *
+		Tick: 80
+
+
+
+
+
+### Nod
+
+
+hand:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+	make: handmake
+		Start: 0
+		Length: *
+		Tick: 80
+
+afld.cnc:
+	idle:
+		Start: 0
+		Tick: 120
+	active:
+		Start: 0
+		Length: 16
+		Tick: 120
+	damaged-idle:
+		Start: 16
+		Tick: 120
+	damaged-active:
+		Start: 16
+		Length: 16
+		Tick: 120
+	dead:
+		Start: 32
+	make: afldmake.cnc
+		Start: 0
+		Length: *
+		Tick: 80
+
+tmpl:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 5
+	active:
+		Start: 0
+		Length: 5
+	damaged-active:
+		Start: 5
+		Length: 5
+	dead:
+		Start: 10
+	make: tmplmake
+		Start: 0
+		Length: *
+		Tick: 60
+
+obli:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 4
+	active:
+		Start: 0
+		Length: 4
+	damaged-active:
+		Start: 4
+		Length: 4
+	dead:
+		Start: 8
+	make: oblimake
+		Start: 0
+		Length: 13
+		Tick: 80
+
+
+sam.cnc:
+	closed-idle:
+		Start:0
+	opening:
+		Start: 1
+		Length: 16
+		Tick: 30
+	idle:
+		Start: 17
+		Facings: 32
+	closing:
+		Start: 50
+		Length: 14
+	damaged-closed-idle:
+		Start:64
+	damaged-opening:
+		Start: 65
+		Length: 16
+		Tick: 30
+	damaged-idle:
+		Start: 81
+		Facings: 32
+	damaged-closing:
+		Start: 114
+		Length: 14
+	dead:
+		Start: 128
+	make: sammake.cnc
+		Start: 0
+		Length: 20
+		Tick: 80
+	muzzle: samfire
+		Start: 0
+		Length: 18
+		Facings: 8

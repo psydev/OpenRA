@@ -1,0 +1,67 @@
+explosion:
+	piff: piff
+		Start: 0
+		Length: *
+	piffs: piffpiff
+		Start: 0
+		Length: *
+	small_explosion: veh-hit3
+		Start: 0
+		Length: *
+	med_explosion: veh-hit2
+		Start: 0
+		Length: *
+	large_splash: h2o_exp1
+		Start: 0
+		Length: *
+	napalm: napalm2
+		Start: 0
+		Length: *
+	nuke: atomsfx
+		Start: 0
+		Length: *
+	med_splash: h2o_exp2
+		Start: 0
+		Length: *
+	self_destruct: art-exp1
+		Start: 0
+		Length: *
+	small_splash: h2o_exp3
+		Start: 0
+		Length: *
+	large_explosion: frag1
+		Start: 0
+		Length: *
+	chemball: chemball		
+		Start: 0
+		Length: *
+	small_napalm: napalm1		#not used by much. currently used for flamethrower.
+		Start: 0
+		Length: *
+	med_napalm: napalm2		#explosion for bomblets
+		Start: 0
+		Length: *
+	big_napalm: napalm3		#huge; not used. (SSM used this explosion in C&C Gold?)
+		Start: 0
+		Length: *
+	small_frag: veh-hit3		#the most common weapon-hit explosion. For rockets, tank shells, etc. 
+		Start: 0
+		Length: *
+	med_frag: frag1			#fragmentation-style; quite large. (MLRS used this explosion in C&C Gold?)
+		Start: 0
+		Length: *
+	big_frag: frag3			#Same as med_frag, except fire hangs around longer.
+		Start: 0
+		Length: *
+	small_poof: veh-hit2		#for Grenades; tower missiles; boat missiles; APC AA gun.
+		Start: 0
+		Length: *
+	poof: art-exp1			#For UnitExplode (artillery); artillery shell hit; GrenadierExplode, 
+		Start: 0
+		Length: *
+	small_building: veh-hit1	#like "building' explosion, but much smaller. (Used for heli-explosion in C&C Gold?)
+		Start: 0
+		Length: *
+	building: fball1
+		Start: 0
+		Length: *

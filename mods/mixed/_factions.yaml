@@ -1,0 +1,87 @@
+World:
+	Country@gdi:
+		Name: GDI
+		Race: gdi
+	Country@nod:
+		Name: Nod
+		Race: nod
+	PaletteFromFile@cncunits:
+		Name: cncunit
+		Filename: temperat.cnc.pal
+		ShadowIndex: 3,4
+
+
+
+
+
+### Vehilcles shared
+
+HARV:
+	Buildable:
+		Owner: allies,soviet,gdi,nod
+		Prerequisites: refinery
+
+
+
+### sharing of pre-reqs:
+
+PROC:
+	ProvidesCustomPrerequisite:
+		Prerequisite: refinery
+
+WEAP:
+	ProvidesCustomPrerequisite:
+		Prerequisite: vehicleproduction
+
+
+
+
+### buildings shared
+
+PROC.CNC:
+	Inherits: PROC
+	Buildable:
+		Prerequisites: anypower
+		Owner: gdi,nod
+		BuildPaletteOrder: 520
+	Tooltip:
+		Icon: procicon
+
+WEAP.CNC:
+	Inherits: WEAP
+	Buildable:
+		Prerequisites: refinery
+		Owner: gdi,nod
+		BuildPaletteOrder: 550
+	Tooltip:
+		Icon: WEAPICON
+
+FIX.CNC:
+	Inherits: FIX
+	Buildable:
+		Owner: gdi,nod
+		BuildPaletteOrder: 580
+		Prerequisites: vehicleproduction
+	Tooltip:
+		Icon: FIXICON
+
+SILO.CNC:
+	Inherits: SILO
+	Buildable:
+		Prerequisites: refinery
+		Owner: gdi,nod
+		BuildPaletteOrder: 610
+	Tooltip:
+		Icon: SILOICON
+
+REFINERY:
+	Tooltip:
+		Name: Ore Refinery
+
+BRIK:
+	Buildable:
+		Owner: allies,soviet,gdi,nod
+
+SBAG:
+	Buildable:
+		Owner: allies,gdi,nod

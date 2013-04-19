@@ -1,0 +1,77 @@
+Player:
+	PlayerColorPalette@cncx:
+		BaseName: cncx
+		BasePalette: cncunit
+		RemapIndex: 176, 178, 180, 182, 184, 186, 189, 191, 177, 179, 181, 183, 185, 187, 188, 190
+	SpawnMapActors:
+	CreateMPPlayers:
+	MPStartLocations:
+	SpawnMPUnits:
+		InitialUnit: mcv.cnc
+#		Faction: gdi
+	SpawnMPUnits@gdi:
+		InitialUnit: mcv.cnc
+		Faction: gdi
+	SpawnMPUnits@nod:
+		InitialUnit: mcv.cnc
+		Faction: nod
+		
+^Building:
+	AutoTargetIgnore:
+
+GUN:
+	-AutoTargetIgnore:
+
+TSLA:
+	-AutoTargetIgnore:
+
+PBOX:
+	-AutoTargetIgnore:
+
+HBOX:
+	-AutoTargetIgnore:
+
+FTUR:
+	-AutoTargetIgnore:
+
+
+
+FIX:
+
+
+
+
+
+
+BARR:
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+
+TENT:
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+
+APWR:
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+
+POWR:
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+
+DOME:
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+
+ATEK:
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+
+STEK:
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+
+WEAP:
+	ProvidesCustomPrerequisite:
+		Prerequisite: vehicleproduction
+

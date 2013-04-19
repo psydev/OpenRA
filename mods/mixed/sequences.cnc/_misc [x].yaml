@@ -1,0 +1,91 @@
+fb4:
+	idle:
+		Start: 0
+		Length: 4
+
+fire:
+	1: fire1
+		Start: 0
+		Length: *
+	2: fire2
+		Start: 0
+		Length: *
+
+120mm:
+	idle:
+		Start: 0
+
+smoke_m:
+	idle:
+		Start: 0
+		Length: *
+	loop:
+		Start: 49
+		Length: 42
+	end:
+		Start: 0
+		Length: 26
+
+laserfire:
+	idle: veh-hit3
+		Start: 0
+		Length: *
+
+dragon:
+	idle:
+		Start: 0
+		Facings: 32
+
+smokey:
+	idle:
+		Start: 0
+		Length: *
+
+bomb:
+	idle:
+		Start: 0
+		Length: *
+
+missile:
+	idle:
+		Start: 0
+		Facings: 32
+
+patriot:
+	idle:
+		Start: 0
+		Facings: 32
+
+miss:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 2
+
+atomicup:
+	idle:
+		Start: 0
+		Length: *
+
+atomicdn:
+	idle:
+		Start: 0
+		Length: *
+
+atomic:
+	up: atomicup
+		Start: 0
+		Length: *
+	down: atomicdn
+		Start: 0
+		Length: *
+
+ionsfx:
+	idle:
+		Start: 0
+		Length: *
+
+bomblet:
+	idle:
+		Start: 0
+		Length: *

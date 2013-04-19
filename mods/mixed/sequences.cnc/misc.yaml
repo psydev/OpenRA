@@ -1,0 +1,22 @@
+laserfire:
+	idle:veh-hit3
+		Start: 0
+		Length: *
+patriot:
+	idle:
+		Start: 0
+		Facings: 32
+
+atomic.cnc:
+	up: atomicup
+		Start: 0
+		Length: *
+	down: atomicdn
+		Start: 0
+		Length: *
+
+ionsfx:
+	idle:
+		Start: 0
+		Length: *
+

@@ -1,0 +1,400 @@
+Background@SETTINGS_MENU:
+	Logic:SettingsMenuLogic
+	X:(WINDOW_RIGHT - WIDTH)/2
+	Y:(WINDOW_BOTTOM- HEIGHT)/2
+	Width: 540
+	Height: 400
+	Children:
+		Label@SETTINGS_LABEL_TITLE:
+			X:0
+			Y:20
+			Width:540
+			Height:25
+			Text:Settings
+			Align:Center
+			Font:Bold
+		Button@BUTTON_CLOSE:
+			X:PARENT_RIGHT - 180
+			Y:PARENT_BOTTOM - 45
+			Width:160
+			Height:25
+			Text:Close
+			Font:Bold
+			Key:escape
+		Container@TAB_CONTAINER:
+			X:0
+			Y:50
+			Width:PARENT_RIGHT
+			Height:25
+			Children:
+				Button@GENERAL:
+					X:45
+					Y:0
+					Width:90
+					Height:25
+					Text:General
+					Font:Bold
+				Button@AUDIO:
+					X:135
+					Y:0
+					Width:90
+					Height:25
+					Text:Audio
+					Font:Bold
+				Button@DISPLAY:
+					X:225
+					Y:0
+					Width:90
+					Height:25
+					Text:Display
+					Font:Bold
+				Button@KEYS:
+					X:315
+					Y:0
+					Width:90
+					Height:25
+					Text:Keys
+					Font:Bold
+				Button@DEBUG:
+					X:405
+					Y:0
+					Width:90
+					Height:25
+					Text:Debug
+					Font:Bold
+		Container@GENERAL_PANE:
+			X:37
+			Y:100
+			Width:PARENT_RIGHT - 37
+			Height:PARENT_BOTTOM - 100
+			Visible: true
+			Children:
+				Label@SETTINGS_PLAYER_NAME:
+					X:0
+					Y:10
+					Text: Player Name:
+				TextField@NAME:
+					Text:Name
+					Width:139
+					Height:25
+					X:90
+					Y:0
+					MaxLength:16
+				Checkbox@EDGE_SCROLL:
+					X:0
+					Y:30
+					Width:200
+					Height:20
+					Text: Enable Edge Scrolling
+				Label@EDGE_SCROLL_AMOUNT_LABEL:
+					X:0
+					Y:70
+					Text: Scroll Speed
+				Slider@EDGE_SCROLL_AMOUNT:
+					X:130
+					Y:60
+					Width:250
+					Height:20
+					Ticks:5
+					MinimumValue: 10
+					MaximumValue: 50
+				Checkbox@INVERSE_SCROLL:
+					X:0
+					Y:90
+					Width:200
+					Height:20
+					Text: Invert Mouse Drag Scrolling
+				Checkbox@TEAMCHAT_TOGGLE:
+					X:0
+					Y:120
+					Width:200
+					Height:20
+					Text: Shift-Enter Toggles Team Chat
+				Checkbox@SHOW_SHELLMAP:
+					X:0
+					Y:150
+					Width:200
+					Height:20
+					Text: Show Shellmap
+				Checkbox@USE_CLASSIC_MOUSE_STYLE_CHECKBOX:
+					X:0
+					Y:180
+					Width:200
+					Height:20
+					Text: Left-Click Orders
+		Container@AUDIO_PANE:
+			X:37
+			Y:100
+			Width:PARENT_RIGHT - 37
+			Height:PARENT_BOTTOM - 100
+			Visible: false
+			Children:
+				Label@SOUND_VOLUME_LABEL:
+					X:0
+					Y:10
+					Text: Sound Volume		
+				Slider@SOUND_VOLUME:
+					X:100
+					Y:0
+					Width:250
+					Height:20
+					Ticks:5
+				Label@MUSIC_VOLUME_LABEL:
+					X:0
+					Y:40
+					Text: Music Volume
+				Slider@MUSIC_VOLUME:
+					X:100
+					Y:30
+					Width:250
+					Height:20
+					Ticks:5
+				Label@VIDEO_VOLUME_LABEL:
+					X:0
+					Y:70
+					Text: Video Volume
+				Slider@VIDEO_VOLUME:
+					X:100
+					Y:60
+					Width:250
+					Height:20
+					Ticks:5
+				Label@SOUND_TICK_TYPE_LABEL:
+					X:0
+					Y:100
+					Text: Cash ticks
+				DropDownButton@CASH_TICK_TYPE:
+					X:100
+					Y:90
+					Width:250
+					Height:25
+					Font:Regular
+					Text:Extreme
+				Checkbox@MAP_MUSIC_CHECKBOX:
+					X:0
+					Y:120
+					Width:200
+					Height:20
+					Text: Autoplay Music After Map Load
+				Label@SOUND_ENGINE_LABEL:
+					X:0
+					Y:150
+					Width:75
+					Height:25
+					Text:Sound Engine:
+				DropDownButton@SOUND_ENGINE:
+					X:100
+					Y:150
+					Width:120
+					Height:25
+					Font:Regular
+					Text:OpenAL
+		Container@DISPLAY_PANE:
+			X:37
+			Y:100
+			Width:PARENT_RIGHT - 37
+			Height:PARENT_BOTTOM - 100
+			Visible: false
+			Children:
+				Label@RENDERER_LABEL:
+					X:0
+					Y:0
+					Width:75
+					Height:25
+					Text:Renderer:
+				DropDownButton@GRAPHICS_RENDERER:
+					X:80
+					Y:1
+					Width:120
+					Height:25
+					Font:Regular
+					Text:OpenGL
+				Label@MODE_LABEL:
+					X:0
+					Y:30
+					Width:45
+					Height:25
+					Text:Mode:
+				DropDownButton@MODE_DROPDOWN:
+					X:50
+					Y:30
+					Width:170
+					Height:25
+					Font:Regular
+					Text:Windowed
+				Container@WINDOW_RESOLUTION:
+					X:225
+					Y:30
+					Children:
+						Label@At:
+							Text:@
+							Font:Bold
+							Y:0-1
+							Height:25
+							Width:25
+							Align:Center
+						TextField@WINDOW_WIDTH:
+							X:25
+							Width:45
+							Height:25
+							MaxLength:5
+						Label@X:
+							Text:x
+							Font:Bold
+							X:70
+							Y:0-1
+							Height:25
+							Width:15
+							Align:Center
+						TextField@WINDOW_HEIGHT:
+							X:85
+							Width:45
+							Height:25
+							MaxLength:5
+				Label@VIDEO_DESC:
+					Y:60
+					Width:PARENT_RIGHT
+					Height:25
+					Font:Tiny
+					Align:Center
+					Text:Renderer/Mode/Resolution changes will be applied after the game is restarted.
+				Checkbox@PIXELDOUBLE_CHECKBOX:
+					Y:90
+					Width:200
+					Height:20
+					Font:Regular
+					Text:Enable Pixel Doubling
+				Checkbox@CAPFRAMERATE_CHECKBOX:
+					Y:120
+					Width:200
+					Height:20
+					Font:Regular
+					Text:Cap Framerate @ 
+				TextField@MAX_FRAMERATE:
+					X:150
+					Y:120
+					Width:45
+					Height:25
+					MaxLength:3
+		Container@KEYS_PANE:
+			X:37
+			Y:100
+			Width:PARENT_RIGHT - 37
+			Height:PARENT_BOTTOM - 100
+			Visible: false
+			Children:
+				Label@KEYS_SPECIALHOTKEYSHEADLINE:
+					X:0
+					Y:0
+					Text: Special Hotkeys:
+					Font:Bold
+				ScrollPanel@SPECIALHOTKEY_LIST:
+					X:0
+					Y:20
+					Width:449
+					Height:85
+					Children:
+						ScrollItem@SPECIALHOTKEY_TEMPLATE:
+							Width:PARENT_RIGHT-27
+							Height:25
+							X:2
+							Y:0
+							Visible:false
+							Children:
+								Label@FUNCTION:
+									X:10
+									Width:200
+									Height:25
+								TextField@HOTKEY:
+									X:250
+									Width:139
+									Height:25
+									MaxLength:16
+				Label@KEYS_UNITCOMMANDSHEADLINE:
+					X:0
+					Y:130
+					Text: Hotkeys for Unit Commands:
+					Font:Bold
+				ScrollPanel@UNITCOMMANDHOTKEY_LIST:
+					X:0
+					Y:150
+					Width:449
+					Height:85
+					Children:
+						ScrollItem@UNITCOMMANDHOTKEY_TEMPLATE:
+							Width:PARENT_RIGHT-27
+							Height:25
+							X:2
+							Y:0
+							Visible:false
+							Children:
+								Label@FUNCTION:
+									X:10
+									Width:200
+									Height:25
+								TextField@HOTKEY:
+									X:250
+									Width:139
+									Height:25
+									MaxLength:16
+		Container@DEBUG_PANE:
+			X:37
+			Y:100
+			Width:PARENT_RIGHT - 37
+			Height:PARENT_BOTTOM - 100
+			Visible: false
+			Children:
+				Checkbox@PERFGRAPH_CHECKBOX:
+					X:0
+					Y:0
+					Width:300
+					Height:20
+					Text:Show Performance Graph
+				Checkbox@PERFTEXT_CHECKBOX:
+					X:0
+					Y:30
+					Width:300
+					Height:20
+					Text:Show Performance Text
+				Label@PERFTEXT_SAMPLE_LABEL:
+					X:30
+					Y:70
+					Text:Update Rate
+				Slider@PERFTEXT_SAMPLE_AMOUNT:
+					X:130
+					Y:60
+					Width:250
+					Height:20
+					Ticks:5
+					MinimumValue: 1
+					MaximumValue: 50
+				Checkbox@CHECKUNSYNCED_CHECKBOX:
+					X:0
+					Y:90
+					Width:300
+					Height:20
+					Text:Check Sync around Unsynced Code
+				Checkbox@BOTDEBUG_CHECKBOX:
+					X:0
+					Y:120
+					Width:300
+					Height:20
+					Text:Show Bot Debug Messages
+				Label@PERFTEXT_SAMPLE_LABEL:
+					X:0
+					Y:160
+					Text:Slow Trait Report Threshold in (mili)seconds
+				Slider@LONG_TICK_THRESHOLD:
+					X:0
+					Y:170
+					Width:380
+					Height:20
+					Ticks:25
+					MinimumValue: 0.0001
+					MaximumValue: 0.01
+				Checkbox@IGNOREVERSIONMISMATCH_CHECKBOX:
+					X:0
+					Y:210
+					Width:300
+					Height:20
+					Text:Don't check for compatible version in game server browser.
